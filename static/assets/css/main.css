@@ -2119,3 +2119,9 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
