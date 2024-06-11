@@ -1,5 +1,5 @@
 from flask_appbuilder import Model
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, String, ForeignKey, Numeric
 from sqlalchemy.orm import relationship
 from dataclasses import dataclass
 
@@ -13,9 +13,9 @@ AuditMixin will add automatic timestamp of created and modified by who
 """
 @dataclass
 class Coefficient(Model):
-    __tablename__ = 'Coefficient'
+    __tablename__ = 'coefficient'
     name: str
-    value: int
+    value: Numeric
 
     name = Column(String(), primary_key=True)
-    value = Column(Integer())
+    value = Column(Numeric())

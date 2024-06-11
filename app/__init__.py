@@ -1,8 +1,9 @@
 import logging
 
-from flask import Flask, flash, redirect, render_template, request, session, abort
+from flask import Flask, flash, redirect, render_template, request, session, abort, jsonify
 from flask_appbuilder import AppBuilder, SQLA
 from app.index import HomeView
+from app import models
 
 """
  Logging configuration
@@ -28,4 +29,12 @@ def set_sqlite_pragma(dbapi_connection, connection_record):
     cursor.execute("PRAGMA foreign_keys=ON")
     cursor.close()
 """
+
+@app.route('/list_coefficients', methods=['GET'])
+def list_coefficients():
+    result_set = db.session.query(models.Coefficient).all()
+
+    return jsonify(result_set)
+
+
 
