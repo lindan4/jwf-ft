@@ -1964,6 +1964,25 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
+.calculate-cost-btn {
+  color: var(--contrast-color);
+  background-color: var(--heading-color);
+  display: inline-block;
+  padding: 8px 35px 10px 35px;
+  border-radius: 50px;
+  transition: none;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  font-family: var(--heading-font);
+  transition: 0.3s;
+}
+
+.calculate-cost-btn:hover {
+  background: var(--accent-color);
+
+}
+
 .contact .php-email-form button[type=submit] {
   color: var(--contrast-color);
   background: var(--accent-color);

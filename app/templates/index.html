@@ -93,7 +93,7 @@
 
       <div class="container">
 
-        <div class="row gy-4">
+        <div class="row gy-4 d-flex justify-content-between">
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item position-relative">
@@ -105,7 +105,7 @@
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
-              <div class="icon"><img src="{{ url_for('static', filename='assets/img/pork_chops.jpg') }}" /</i></div>
+              <div class="icon"><img src="{{ url_for('static', filename='assets/img/pork_chops.jpg') }}" /></div>
               <h4><a href="service-details.html" class="stretched-link">Pork</a></h4>
               <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
             </div>
@@ -113,22 +113,69 @@
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
+              <div class="icon"><img src="{{ url_for('static', filename='assets/img/salad_platter.jpg') }}" /></div>
               <h4><a href="service-details.html" class="stretched-link">Fruits and Vegetables</a></h4>
               <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+          <!-- <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-broadcast icon"></i></div>
               <h4><a href="service-details.html" class="stretched-link">Nutritional Supplements</a></h4>
               <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
             </div>
-          </div><!-- End Service Item -->
+          </div> -->
+          <!-- End Service Item -->
 
         </div>
 
+      </div>
+
+      <div class="container section-title mt-4" data-aos="fade-up">
+        <h2>Delivery Calculator</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row gy-4 service-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-sm-4">
+            <h4>Select Distance</h4>
+              <div class="col">
+                <input type="radio" id="distance-10" name="distance" value="10" />
+                <label for="distance-10">10 km</label>
+              </div>
+              <div class="col">
+                <input type="radio" id="distance-25" name="distance" value="25" />
+                <label for="distance-25">25 km</label>
+              </div>
+              <div class="col">
+                <input type="radio" id="distance-50" name="distance" value="50" />
+                <label for="distance-50">50 km</label>
+              </div>
+              <div class="col">
+                <input type="radio" id="distance-100" name="distance" value="100" />
+                <label for="distance-100">100 km</label>
+              </div>
+              <div class="col">
+                <input type="radio" id="distance-other-radio" name="distance" />
+                <input id="distance-other-input" type="number" placeholder="Enter distance" name="distance" />
+                <label for="distance-other-input">km</label>
+              </div>
+          </div>
+          <div class="col-sm-4">
+            <h4>Enter Weight</h4>
+            <div class="col">
+              <input id="weight-input" type="number" placeholder="e.g. 10" name="distance" />
+              <label for="distance-other-input">kg</label>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <h4>Delivery Cost</h4>
+            <div class="col">
+              <button class="calculate-cost-btn">Calculate Cost</button>
+            </div>
+          </div>
+        </div>
       </div>
 
     </section><!-- /Services Section -->
