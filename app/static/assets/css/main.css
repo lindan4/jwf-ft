@@ -1964,7 +1964,7 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-.calculate-cost-btn {
+#calculate-cost-btn {
   color: var(--contrast-color);
   background-color: var(--heading-color);
   display: inline-block;
@@ -1978,7 +1978,7 @@ section,
   transition: 0.3s;
 }
 
-.calculate-cost-btn:hover {
+#calculate-cost-btn:hover {
   background: var(--accent-color);
 
 }

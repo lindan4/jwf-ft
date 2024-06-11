@@ -37,4 +37,3 @@ def list_coefficients():
     return jsonify(result_set)
 
 
-
