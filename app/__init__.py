@@ -36,4 +36,30 @@ def list_coefficients():
 
     return jsonify(result_set)
 
+@app.route('/calculate_cost', methods=['POST'])
+def calculate_cost():
+    # Get distance and weight from request body
+    delivery_distance = request.form.get('delivery_distance', type=float)
+    delivery_weight = request.form.get('delivery_weight', type=float)
 
+    if delivery_distance is None:
+        return jsonify({ "error": "delivery_distance value was not provided or was provided in an invalid format" }), 400
+    
+    if delivery_weight is None:
+        return jsonify({ "error": "delivery_weight value was not provided or was provided in an invalid format" }), 400
+
+    # Get distance coefficient and weight coefficient from PostgreSQL database
+    result_set = db.session.query(models.Coefficient)
+
+    distance_coefficient = float(result_set.filter(models.Coefficient.name == 'distance').first().value)
+    weight_coefficient = float(result_set.filter(models.Coefficient.name == 'package').first().value)
+
+    # Perform calculation
+    delivery_cost = (distance_coefficient * delivery_distance) + (weight_coefficient * delivery_weight)
+    
+    db.session.flush()
+    db.session.commit()
+
+    delivery_cost_str = "{:.2f}".format(delivery_cost)
+
+    return jsonify({ "cost": delivery_cost_str, "status_message": "value successfully calculated"  })
