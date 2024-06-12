@@ -30,11 +30,29 @@ def set_sqlite_pragma(dbapi_connection, connection_record):
     cursor.close()
 """
 
-@app.route('/list_coefficients', methods=['GET'])
+@app.route('/admin/list_coefficients', methods=['GET'])
 def list_coefficients():
     result_set = db.session.query(models.Coefficient).all()
 
-    return jsonify(result_set)
+    return jsonify(result_set), 200
+
+@app.route('/admin/update_coefficients', methods=['POST'])
+def update_coefficients():
+    new_distance_coefficient = request.form.get("new_distance_coefficient")
+    new_weight_coefficient = request.form.get("new_weight_coefficient")
+
+    if new_distance_coefficient is None and new_weight_coefficient is None:
+        return jsonify({ "error": "One or more of the required values were not provided."}), 400
+    
+    db.session.query(models.Coefficient).filter(models.Coefficient.name == "distance").update({ models.Coefficient.value: new_distance_coefficient })
+    db.session.query(models.Coefficient).filter(models.Coefficient.name == "package").update({ models.Coefficient.value: new_weight_coefficient })
+
+    db.session.flush()
+    db.session.commit()
+
+
+    return jsonify({ "message": "Coefficients have been successfully updated" }), 200
+    
 
 @app.route('/calculate_cost', methods=['POST'])
 def calculate_cost():

@@ -8,6 +8,8 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
   <!-- Favicons -->
   <link href="{{ url_for('static', filename='assets/img/favicon.png') }}" rel="icon">
   <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
@@ -165,21 +167,15 @@
           <div class="col-sm-4">
             <h4>Enter Weight</h4>
             <div class="col">
-              <div class="row">
-                <input id="weight-input" type="number" placeholder="e.g. 10" name="distance" />
+                <input id="weight-input" type="number" placeholder="e.g. 10" name="weight" />
                 <label for="weight-input">kg</label>
-              </div>
-
-              <div class="row">
-
-              </div>
-              
             </div>
           </div>
           <div class="col-sm-4">
             <h4>Delivery Cost</h4>
             <div class="col">
               <button id="calculate-cost-btn">Calculate Cost</button>
+              <p id="delivery-cost-p" class="mt-2">The delivery cost will be $20.00</p>
             </div>
           </div>
         </div>
@@ -645,8 +641,8 @@
 
   <!-- Main JS File -->
   <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/cost.js') }}"></script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </body>
 
 </html>
