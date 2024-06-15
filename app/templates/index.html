@@ -183,118 +183,92 @@
 
     </section><!-- /Services Section -->
 
-    <!-- Portfolio Section -->
+    <!-- Areas of operation Section -->
     <section id="areas_of_operation" class="portfolio section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Areas of Operation</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>J & W Foods Inc. operates primarily within Ontario, offering both retail and wholesale services from our Scarborough headquarters.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <div class="areas-of-operation-layout" data-default-filter=".filter-meat-butcher">
 
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Card</li>
-            <li data-filter=".filter-branding">Web</li>
+          <ul class="portfolio-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter=".filter-meat-butcher" class="filter-active">Retail Butcher Shop</li>
+            <li data-filter=".filter-wholesale">Wholesale Distribution</li>
+            <li data-filter=".filter-online">Online</li>
+            <li data-filter=".filter-butler">Meal Butler Service</li>
           </ul><!-- End Portfolio Filters -->
 
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-1.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-1.jpg') }}" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="row d-flex flex-direction-row portfolio-item filter-meat-butcher">
+              <div class="col-sm-6 description">
+                <p>
+                  Our retail butcher shop, located in Scarborough, serves as a one-stop-shop for health-conscious consumers. Here, customers can find a wide range of premium graded meats, including chicken, beef, pork, and seafood, all sourced from trusted local farmers and suppliers.
+                </p>
               </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-2.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-2.jpg') }}" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              <div class="col-sm-6">
+                <img src="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-1.jpg') }}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <div>
+                    <h4>App 1</h4>
+                    <p>Lorem ipsum, dolor sit</p>
+                  </div>
+                  <a href="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-1.jpg') }}" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-3.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-3.jpg') }}" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            <div class="row d-flex flex-direction-row portfolio-item portfolio-item-hidden filter-online">
+              <div class="col-sm-6 description">
+                <p>Our online platform extends our reach by allowing customers to order products conveniently from their homes. The online ordering system, particularly for our Meal Butler service, simplifies the process of purchasing fully cooked, portion-controlled meals. We deliver across Ontario, ensuring that our healthy and nutritious meal options are accessible to a wider audience..</p>
               </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-4.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-4.jpg') }}" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              <div class="col-sm-6">
+                <img src="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-2.jpg') }}" class="img-fluid col" alt="">
+                <div class="portfolio-info">
+                  <div>
+                    <h4>Product 1</h4>
+                    <p>Lorem ipsum, dolor sit</p>
+                  </div>
+                  <a href="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-2.jpg') }}" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-5.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-5.jpg') }}" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            <div class="row d-flex flex-direction-row portfolio-item portfolio-item-hidden filter-butler">
+              <div class="col-sm-6 description">
+                <p>The Meal Butler service caters to individuals and families looking for convenient, healthy meal options. Our fully cooked, flash-frozen meals are available for online purchase and delivery throughout Ontario. This service supports various dietary needs, including weight loss, sports training, and general healthy eating.</p>
               </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-6.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-6.jpg') }}" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              <div class="col-sm-6">
+                <img src="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-3.jpg') }}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <div>
+                    <h4>Branding 1</h4>
+                    <p>Lorem ipsum, dolor sit</p>
+                  </div>
+                  <a href="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-3.jpg') }}" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-7.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-7.jpg') }}" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            <div class="row d-flex flex-direction-row portfolio-item portfolio-item-hidden filter-wholesale">
+              <div class="col-sm-6 description">
+                <p style="background-color: red;">We serve numerous restaurants, catering services, and other food businesses throughout Ontario. Our wholesale operations are designed to meet the needs of businesses seeking high-quality meats and food products at competitive prices. We pride ourselves on maintaining strong relationships with our clients, ensuring timely and efficient deliveries.</p>
               </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-8.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-8.jpg') }}" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              <div class="col-sm-6">
+                <img src="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-4.jpg') }}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <div>
+                    <h4>App 2</h4>
+                    <p>Lorem ipsum, dolor sit</p>
+                  </div>
+                  <a href="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-4.jpg') }}" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                </div>
               </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-9.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{{ url_for('static', filename='assets/img/masonry-portfolio/masonry-portfolio-9.jpg') }}" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
+            </div>
           </div><!-- End Portfolio Container -->
 
         </div>
@@ -309,150 +283,50 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Corporate Information</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
         <div class="row gy-4">
-
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="{{ url_for('static', filename='assets/img/team/team-1.jpg') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ url_for('static', filename='assets/img/young-man-md.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""> <i class="bi bi-linkedin"></i> </a>
-                </div>
+                <h4>Stavros Trougakos</h4>
+                <span>Co-founder</span>
               </div>
             </div>
           </div><!-- End Team Member -->
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="{{ url_for('static', filename='assets/img/team/team-2.jpg') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ url_for('static', filename='assets/img/frank-md.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""> <i class="bi bi-linkedin"></i> </a>
-                </div>
+                <h4>William Fehr</h4>
+                <span>Co-founder</span>
               </div>
             </div>
           </div><!-- End Team Member -->
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="{{ url_for('static', filename='assets/img/team/team-3.jpg') }}" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""> <i class="bi bi-linkedin"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
+        </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="{{ url_for('static', filename='assets/img/team/team-4.jpg') }}" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""> <i class="bi bi-linkedin"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
+        <div class="row gy-4 mt-4">
+          <h4>Overview</h4>
+          <p>
+            J & W Foods Inc. was co-founded in 1995 by Stavros Trougakos and William Fehr, inspired by their father, George Trougakos, a passionate butcher and grocer in downtown Toronto since the early 1960s. Building on George's legacy and entrepreneurial spirit, J & W Foods has grown into a renowned distributor and butcher shop, known for its commitment to providing high-quality, natural meats and nutritious foods.
+          </p>
+        </div>
 
+        <div class="row gy-4">
+          <h4>Mission and Vision</h4>
+          <p>
+            Our mission is to offer premium, natural meats and health-focused food products that support our customers' wellness goals. We envision a community where high-quality, nutritious foods are accessible to all, fostering a healthier lifestyle.
+          </p>
         </div>
 
       </div>
 
     </section><!-- /Team Section -->
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Pricing</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="pricing-item">
-              <h3>Free Plan</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="pricing-item featured">
-              <h3>Business Plan</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="pricing-item">
-              <h3>Developer Plan</h3>
-              <h4><sup>$</sup>49<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-          </div><!-- End Pricing Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Pricing Section -->
 
 
     <!-- Contact Section -->
@@ -566,7 +440,7 @@
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="d-flex align-items-center">
-            <span class="sitename">Arsha</span>
+            <span class="sitename">JW Foods</span>
           </a>
           <div class="footer-contact pt-3">
             <p>2201 Brimley Rd Unit 1</p>
