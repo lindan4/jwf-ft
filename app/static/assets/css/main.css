@@ -1391,6 +1391,12 @@ section,
   word-wrap: break-word;
 }
 
+.portfolio .portfolio-item .right-portfolio-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .portfolio .portfolio-item .portfolio-info .preview-link,
 .portfolio .portfolio-item .portfolio-info .details-link {
   /* position: absolute; */
