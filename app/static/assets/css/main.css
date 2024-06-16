@@ -12,7 +12,7 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --default-font: Arial, sans-serif;
   --heading-font: "Jost",  sans-serif;
   --nav-font: "Poppins",  sans-serif;
 }
@@ -1344,19 +1344,31 @@ section,
 
 .portfolio .portfolio-item {
   position: relative;
+  margin-top: 40px;
   overflow: hidden;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.portfolio .portfolio-item-hidden {
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  transform: scale(0.9);
+  pointer-events: none;
+  display: none;
 }
 
 .portfolio .portfolio-item .portfolio-info {
   opacity: 0;
-  position: absolute;
-  left: 12px;
-  right: 12px;
+  /* position: absolute; */
+  width: 100%;
   bottom: -100%;
   z-index: 3;
   transition: all ease-in-out 0.5s;
   background: color-mix(in srgb, var(--background-color), transparent 10%);
   padding: 15px;
+  display: flex;
+  flex-direction: row;
 }
 
 .portfolio .portfolio-item .portfolio-info h4 {
@@ -1365,19 +1377,32 @@ section,
   padding-right: 50px;
 }
 
+.portfolio .portfolio-item .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .portfolio .portfolio-item .portfolio-info p {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   font-size: 14px;
   margin-bottom: 0;
   padding-right: 50px;
+  word-wrap: break-word;
+}
+
+.portfolio .portfolio-item .right-portfolio-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .portfolio .portfolio-item .portfolio-info .preview-link,
 .portfolio .portfolio-item .portfolio-info .details-link {
-  position: absolute;
-  right: 50px;
+  /* position: absolute; */
+  /* right: 50px; */
   font-size: 24px;
-  top: calc(50% - 14px);
+  /* top: calc(50% - 14px); */
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   transition: 0.3s;
   line-height: 0;
@@ -1962,6 +1987,25 @@ section,
 .contact .php-email-form input[type=email]::placeholder,
 .contact .php-email-form textarea::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+#calculate-cost-btn {
+  color: var(--contrast-color);
+  background-color: var(--heading-color);
+  display: inline-block;
+  padding: 8px 35px 10px 35px;
+  border-radius: 50px;
+  transition: none;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  font-family: var(--heading-font);
+  transition: 0.3s;
+}
+
+#calculate-cost-btn:hover {
+  background: var(--accent-color);
+
 }
 
 .contact .php-email-form button[type=submit] {
