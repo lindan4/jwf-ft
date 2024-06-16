@@ -1,4 +1,4 @@
-Thanks for downloading this template!
+Made use of the Arsha template for the UI
 
 Template Name: Arsha
 Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
