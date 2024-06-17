@@ -36,6 +36,10 @@ def list_coefficients():
 
     return jsonify(result_set), 200
 
+@app.route('/admin', methods=['GET'])
+def render_admin():
+    return render_template('admin.html')
+
 @app.route('/admin/update_coefficients', methods=['POST'])
 def update_coefficients():
     new_distance_coefficient = request.form.get("new_distance_coefficient")
