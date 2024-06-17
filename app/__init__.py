@@ -36,6 +36,17 @@ def list_coefficients():
 
     return jsonify(result_set), 200
 
+@app.route('/admin', methods=['GET'])
+def render_admin():
+    result_set = db.session.query(models.Coefficient).all()
+
+
+    distance_coefficient = result_set[0].value
+
+    weight_coefficient = result_set[1].value
+
+    return render_template('admin.html', distance_coefficient=distance_coefficient, weight_coefficient=weight_coefficient)
+
 @app.route('/admin/update_coefficients', methods=['POST'])
 def update_coefficients():
     new_distance_coefficient = request.form.get("new_distance_coefficient")
