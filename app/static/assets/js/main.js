@@ -53,20 +53,6 @@
   });
 
   /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll(".navmenu .toggle-dropdown").forEach((navmenu) => {
-    navmenu.addEventListener("click", function (e) {
-      if (document.querySelector(".mobile-nav-active")) {
-        e.preventDefault();
-        this.parentNode.classList.toggle("active");
-        this.parentNode.nextElementSibling.classList.toggle("dropdown-active");
-        e.stopImmediatePropagation();
-      }
-    });
-  });
-
-  /**
    * Preloader
    */
   const preloader = document.querySelector("#preloader");
@@ -111,13 +97,6 @@
     });
   }
   window.addEventListener("load", aosInit);
-
-  /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: ".glightbox",
-  });
 
   /**
    * Init swiper sliders
@@ -184,7 +163,7 @@
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
-  window.addEventListener("load", function (e) {
+  window.addEventListener("load", function () {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
         setTimeout(() => {
