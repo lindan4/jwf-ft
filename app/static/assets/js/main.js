@@ -53,20 +53,6 @@
   });
 
   /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll(".navmenu .toggle-dropdown").forEach((navmenu) => {
-    navmenu.addEventListener("click", function (e) {
-      if (document.querySelector(".mobile-nav-active")) {
-        e.preventDefault();
-        this.parentNode.classList.toggle("active");
-        this.parentNode.nextElementSibling.classList.toggle("dropdown-active");
-        e.stopImmediatePropagation();
-      }
-    });
-  });
-
-  /**
    * Preloader
    */
   const preloader = document.querySelector("#preloader");
@@ -113,13 +99,6 @@
   window.addEventListener("load", aosInit);
 
   /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: ".glightbox",
-  });
-
-  /**
    * Init swiper sliders
    */
   function initSwiper() {
@@ -142,23 +121,6 @@
         faqItem.parentNode.classList.toggle("faq-active");
       });
     });
-
-  /**
-   * Animate the skills items on reveal
-   */
-  let skillsAnimation = document.querySelectorAll(".skills-animation");
-  skillsAnimation.forEach((item) => {
-    new Waypoint({
-      element: item,
-      offset: "80%",
-      handler: function (direction) {
-        let progress = item.querySelectorAll(".progress .progress-bar");
-        progress.forEach((el) => {
-          el.style.width = el.getAttribute("aria-valuenow") + "%";
-        });
-      },
-    });
-  });
 
   /**
    * Init isotope layout and filters
@@ -201,7 +163,7 @@
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
-  window.addEventListener("load", function (e) {
+  window.addEventListener("load", function () {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
         setTimeout(() => {
