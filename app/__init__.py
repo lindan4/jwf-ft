@@ -38,7 +38,14 @@ def list_coefficients():
 
 @app.route('/admin', methods=['GET'])
 def render_admin():
-    return render_template('admin.html')
+    result_set = db.session.query(models.Coefficient).all()
+
+
+    distance_coefficient = result_set[0].value
+
+    weight_coefficient = result_set[1].value
+
+    return render_template('admin.html', distance_coefficient=distance_coefficient, weight_coefficient=weight_coefficient)
 
 @app.route('/admin/update_coefficients', methods=['POST'])
 def update_coefficients():
