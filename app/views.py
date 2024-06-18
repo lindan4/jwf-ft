@@ -2,7 +2,7 @@ from flask import render_template
 from flask_appbuilder.models.sqla.interface import SQLAInterface
 from flask_appbuilder import ModelView, ModelRestApi, BaseView, expose, AppBuilder, IndexView
 
-from . import appbuilder, db
+from . import appbuilder, db, models
 
 """
     Create your Model based REST API::
