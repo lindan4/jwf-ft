@@ -40,12 +40,10 @@ def list_coefficients():
 def render_admin():
     result_set = db.session.query(models.Coefficient).all()
 
-
     distance_coefficient = result_set[0].value
-
     weight_coefficient = result_set[1].value
 
-    return render_template('admin.html', distance_coefficient=distance_coefficient, weight_coefficient=weight_coefficient)
+    return render_template('admin.html', distance_coefficient=distance_coefficient, weight_coefficient=weight_coefficient), 200
 
 @app.route('/admin/update_coefficients', methods=['POST'])
 def update_coefficients():
@@ -61,8 +59,7 @@ def update_coefficients():
     db.session.flush()
     db.session.commit()
 
-
-    return jsonify({ "message": "Coefficients have been successfully updated" }), 200
+    return 204
     
 
 @app.route('/calculate_cost', methods=['POST'])

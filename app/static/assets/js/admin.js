@@ -49,7 +49,9 @@ $(document).ready(function () {
         $("#distance-coefficient-val").text(inputDistanceCoefficientVal);
         $("#weight-coefficient-val").text(inputWeightCoefficientVal);
 
-        $("#status-message").text(data.message);
+        $("#status-message").text(
+          "Coefficients have been successfully updated"
+        );
         $("#status-message").show();
       }
     );
