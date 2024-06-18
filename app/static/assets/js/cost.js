@@ -1,6 +1,8 @@
 $(document).ready(function () {
   $("p[id='delivery-cost-p']").hide();
   $("#calculate-cost-btn").click(function () {
+    let dcTxt = $("p[id='delivery-cost-p']");
+
     // Get distance
     let distanceVal = $("input[name='distance']:checked").val();
     if (distanceVal == "other") {
@@ -9,9 +11,11 @@ $(document).ready(function () {
     // Get weight
     let weightVal = $("input[name='weight']").val();
 
-    console.log(distanceVal, weightVal);
-
-    let dcTxt = $("p[id='delivery-cost-p']");
+    if (distanceVal == "" || weightVal == "") {
+      dcTxt.text("One or more fields are missing.");
+      dcTxt.show();
+      return;
+    }
 
     $.post(
       "/calculate_cost",
