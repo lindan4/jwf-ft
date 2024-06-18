@@ -12,7 +12,9 @@ $(document).ready(function () {
     let weightVal = $("input[name='weight']").val();
 
     if (distanceVal == "" || weightVal == "") {
-      dcTxt.text("One or more fields are missing.");
+      dcTxt.text(
+        "One or more fields are missing or are in the incorrect format."
+      );
       dcTxt.show();
       return;
     }
