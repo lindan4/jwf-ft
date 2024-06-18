@@ -9,7 +9,10 @@ $(document).ready(function () {
       distanceVal = $("#distance-other-input").val();
     }
     // Get weight
-    let weightVal = $("input[name='weight']").val();
+    let weightVal = $("input[name='weight']:checked").val();
+    if (weightVal == "other") {
+      weightVal = $("#weight-other-input").val();
+    }
 
     if (distanceVal == "" || weightVal == "") {
       dcTxt.text(

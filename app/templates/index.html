@@ -129,38 +129,55 @@
 
       <div class="container">
         <div class="row gy-4 service-item" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-md-4 col-sm-12">
+          <div class="col-lg-4 col-md-12 col-sm-12">
             <h4>Select Distance</h4>
-              <div class="col">
+              <div class="col d-flex flex-direction-row align-items-center column-gap-1">
                 <input type="radio" id="distance-10" name="distance" value="10" />
                 <label for="distance-10">10 km</label>
               </div>
-              <div class="col">
+              <div class="col d-flex flex-direction-row align-items-center column-gap-1">
                 <input type="radio" id="distance-25" name="distance" value="25" />
                 <label for="distance-25">25 km</label>
               </div>
-              <div class="col">
+              <div class="col d-flex flex-direction-row align-items-center column-gap-1">
                 <input type="radio" id="distance-50" name="distance" value="50" />
                 <label for="distance-50">50 km</label>
               </div>
-              <div class="col">
+              <div class="col d-flex flex-direction-row align-items-center column-gap-1">
                 <input type="radio" id="distance-100" name="distance" value="100" />
                 <label for="distance-100">100 km</label>
               </div>
-              <div class="col">
+              <div class="col d-flex flex-direction-row align-items-center column-gap-1">
                 <input type="radio" id="distance-other-radio" name="distance" value="other" />
                 <input id="distance-other-input" type="number" placeholder="Enter distance" name="distance" />
                 <label for="distance-other-input">km</label>
               </div>
           </div>
-          <div class="col-md-4 col-sm-12">
-            <h4>Enter Weight</h4>
-            <div class="col">
-                <input id="weight-input" type="number" placeholder="e.g. 10" name="weight" />
-                <label for="weight-input">kg</label>
+          <div class="col-lg-4 col-md-12 col-sm-12">
+            <h4>Select Weight</h4>
+            <div class="col d-flex flex-direction-row align-items-center column-gap-1">
+              <input type="radio" id="weight-0.25" name="weight" value="0.25" />
+              <label for="weight-0.25">0.25 kg</label>
+            </div>
+            <div class="col d-flex flex-direction-row align-items-center column-gap-1">
+              <input type="radio" id="weight-0.50" name="weight" value="0.50" />
+              <label for="weight-0.50">0.50 kg</label>
+            </div>
+            <div class="col d-flex flex-direction-row align-items-center column-gap-1">
+              <input type="radio" id="weight-0.75" name="weight" value="0.75" />
+              <label for="weight-0.75">0.75 kg</label>
+            </div>
+            <div class="col d-flex flex-direction-row align-items-center column-gap-1">
+              <input type="radio" id="weight-1.00" name="weight" value="1.00" />
+              <label for="weight-1.00">1.00 kg</label>
+            </div>
+            <div class="col d-flex flex-direction-row align-items-center column-gap-1">
+              <input type="radio" id="weight-other-radio" name="weight" value="other" />
+              <input id="weight-other-input" type="number" placeholder="e.g. 2.00" name="weight" />
+              <label for="weight-other-input">kg</label>
             </div>
           </div>
-          <div class="col-md-4 col-sm-12">
+          <div class="col-lg-4 col-md-12 col-sm-12">
             <h4>Delivery Cost</h4>
             <div class="col">
               <button id="calculate-cost-btn">Calculate Cost</button>
