@@ -1,3 +1,5 @@
+-- DROP TABLE IF EXISTS public.coefficient;
+
 CREATE TABLE IF NOT EXISTS public.coefficient
 (
     name text COLLATE pg_catalog."default" NOT NULL,
@@ -15,4 +17,4 @@ insert into public.coefficient(name, value)
 values ('distance', 0.5);
 
 insert into public.coefficient(name, value)
-values ('package', 0.5);
+values ('weight', 0.5);

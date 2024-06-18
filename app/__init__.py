@@ -54,7 +54,7 @@ def update_coefficients():
         return jsonify({ "error": "One or more of the required values were not provided."}), 400
     
     db.session.query(models.Coefficient).filter(models.Coefficient.name == "distance").update({ models.Coefficient.value: new_distance_coefficient })
-    db.session.query(models.Coefficient).filter(models.Coefficient.name == "package").update({ models.Coefficient.value: new_weight_coefficient })
+    db.session.query(models.Coefficient).filter(models.Coefficient.name == "weight").update({ models.Coefficient.value: new_weight_coefficient })
 
     db.session.flush()
     db.session.commit()
@@ -78,7 +78,7 @@ def calculate_cost():
     result_set = db.session.query(models.Coefficient)
 
     distance_coefficient = float(result_set.filter(models.Coefficient.name == 'distance').first().value)
-    weight_coefficient = float(result_set.filter(models.Coefficient.name == 'package').first().value)
+    weight_coefficient = float(result_set.filter(models.Coefficient.name == 'weight').first().value)
 
     # Perform calculation
     delivery_cost = (distance_coefficient * delivery_distance) + (weight_coefficient * delivery_weight)
