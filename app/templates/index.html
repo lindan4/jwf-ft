@@ -129,7 +129,7 @@
 
       <div class="container">
         <div class="row gy-4 service-item" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-sm-4">
+          <div class="col-md-4 col-sm-12">
             <h4>Select Distance</h4>
               <div class="col">
                 <input type="radio" id="distance-10" name="distance" value="10" />
@@ -153,14 +153,14 @@
                 <label for="distance-other-input">km</label>
               </div>
           </div>
-          <div class="col-sm-4">
+          <div class="col-md-4 col-sm-12">
             <h4>Enter Weight</h4>
             <div class="col">
                 <input id="weight-input" type="number" placeholder="e.g. 10" name="weight" />
                 <label for="weight-input">kg</label>
             </div>
           </div>
-          <div class="col-sm-4">
+          <div class="col-md-4 col-sm-12">
             <h4>Delivery Cost</h4>
             <div class="col">
               <button id="calculate-cost-btn">Calculate Cost</button>
@@ -189,7 +189,6 @@
             <li data-filter=".filter-meat-butcher" class="filter-active">Retail Butcher Shop</li>
             <li data-filter=".filter-wholesale">Wholesale Distribution</li>
             <li data-filter=".filter-online">Online</li>
-            <li data-filter=".filter-butler">Meal Butler Service</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
@@ -210,15 +209,6 @@
               </div>
               <div class="col-sm-6 right-portfolio-container">
                 <img src="{{ url_for('static', filename='assets/img/online-marketplace.png') }}" class="img-fluid col" alt="">
-              </div>
-            </div>
-
-            <div class="row d-flex flex-direction-row portfolio-item portfolio-item-hidden filter-butler">
-              <div class="col-sm-6 description">
-                <p>The Meal Butler service caters to individuals and families looking for convenient, healthy meal options. Our fully cooked, flash-frozen meals are available for online purchase and delivery throughout Ontario. This service supports various dietary needs, including weight loss, sports training, and general healthy eating.</p>
-              </div>
-              <div class="col-sm-6 right-portfolio-container">
-                <img src="{{ url_for('static', filename='assets/img/meat-butler-service.png') }}" class="img-fluid" alt="">
               </div>
             </div>
 
