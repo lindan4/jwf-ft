@@ -59,7 +59,7 @@ def update_coefficients():
     db.session.flush()
     db.session.commit()
 
-    return 204
+    return '', 204
     
 
 @app.route('/calculate_cost', methods=['POST'])

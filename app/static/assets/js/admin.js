@@ -45,7 +45,7 @@ $(document).ready(function () {
         new_distance_coefficient: inputDistanceCoefficientVal,
         new_weight_coefficient: inputWeightCoefficientVal,
       },
-      function (data) {
+      function () {
         $("#distance-coefficient-val").text(inputDistanceCoefficientVal);
         $("#weight-coefficient-val").text(inputWeightCoefficientVal);
 
