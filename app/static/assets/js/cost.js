@@ -1,5 +1,14 @@
 $(document).ready(function () {
   $("p[id='delivery-cost-p']").hide();
+
+  $("#distance-other-input").on("click", function () {
+    $("input[name='distance']").prop("checked", true);
+  });
+
+  $("#weight-other-input").on("click", function () {
+    $("input[name='weight']").prop("checked", true);
+  });
+
   $("#calculate-cost-btn").click(function () {
     let dcTxt = $("p[id='delivery-cost-p']");
 
