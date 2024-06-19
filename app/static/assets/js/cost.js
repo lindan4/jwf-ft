@@ -31,6 +31,12 @@ $(document).ready(function () {
       return;
     }
 
+    if (distanceVal <= 0 || weightVal <= 0) {
+      dcTxt.text("Distance and/or weight must be greater than 0.");
+      dcTxt.show();
+      return;
+    }
+
     $.post(
       "/calculate_cost",
       {
